@@ -1,0 +1,12 @@
+input {
+  width: 100%;
+  padding: 16px 20px;
+  border-radius: 14px;
+  border: none;
+  outline: 1px solid transparent;
+  transition: all 0.5s ease;
+}
+input:focus,
+input:hover {
+  outline-color: gray;
+}
