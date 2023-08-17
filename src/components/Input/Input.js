@@ -1,8 +1,8 @@
 import "./Input.css";
 
-const Input = ({ setInpValue, placeholder }) => {
+const Input = ({ setInputValue, placeholder }) => {
   const onChange = (e) => {
-    setInpValue(e.currentTarget.value);
+    setInputValue(e.currentTarget.value);
   };
   return (
     <label>

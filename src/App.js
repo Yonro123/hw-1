@@ -1,11 +1,13 @@
 import { useState } from "react";
-import Input from "./components/Input/Input";
-import Button from "./components/Button/Button";
+import Form from "./components/Form/Form";
+import UrlList from "./components/UrlList/UrlList";
 
 import "./App.css";
 
 function App() {
-  const [inpValue, setInpValue] = useState("");
+  const [inputValue, setInputValue] = useState("");
+  const [isVisible, setIsVisible] = useState(false);
+  const [text, setText] = useState("");
 
   return (
     <div className="App">
@@ -15,10 +17,13 @@ function App() {
           короткой ссылке клиентам не придётся видеть длинные url-адреса,
           занимающие много места.
         </h2>
-        <form className="form">
-          <Input setInpValue={setInpValue} />
-          <Button value="Сократить" disabled={inpValue === "" ? true : false} />
-        </form>
+        <Form
+          setText={setText}
+          inputValue={inputValue}
+          setInputValue={setInputValue}
+          setIsVisible={setIsVisible}
+        />
+        <UrlList isVisible={isVisible} text={text} inputValue={inputValue} />
       </div>
     </div>
   );

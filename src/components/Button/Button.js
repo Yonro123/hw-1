@@ -1,9 +1,11 @@
 import "./Button.css";
 
-const Button = ({ value, disabled }) => {
+const Button = ({ value, disabled, OnClick }) => {
   return (
     <>
-      <button disabled={disabled}>{value}</button>
+      <button disabled={disabled} onClick={OnClick}>
+        {value}
+      </button>
     </>
   );
 };

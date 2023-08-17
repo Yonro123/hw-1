@@ -1,0 +1,64 @@
+.box {
+  max-width: 100%;
+  max-height: max-content;
+  border-radius: 24px;
+  overflow-y: hidden;
+  background-color: white;
+}
+.url {
+  display: block;
+  padding: 20px 40px;
+}
+.active {
+  animation: ShowBox 1s ease;
+}
+.hide {
+  max-height: 0;
+}
+.urlText {
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.copyright {
+  position: relative;
+  max-width: max-content;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 400;
+  border: 1px solid #a5b1ca4d;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: 0.3s all ease;
+}
+.copyright:hover {
+  border-color: #8694b066;
+}
+
+.copy {
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  padding: 15px 10px;
+  border-radius: 24px;
+  color: white;
+  opacity: 0;
+  transform: translateX(-50%);
+  background-color: gray;
+  transition: opacity 0.5s ease;
+}
+.copy.showCopy {
+  opacity: 1;
+}
+
+@keyframes ShowBox {
+  0% {
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
+  100% {
+    max-height: 500px;
+    opacity: 1;
+  }
+}
