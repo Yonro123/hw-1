@@ -6,7 +6,7 @@ import "./App.css";
 
 function App() {
   const [inputValue, setInputValue] = useState("");
-  const [isVisible, setIsVisible] = useState(false);
+  const [isShortUrl, setIsShortUrl] = useState(false);
   const [text, setText] = useState("");
 
   return (
@@ -21,9 +21,9 @@ function App() {
           setText={setText}
           inputValue={inputValue}
           setInputValue={setInputValue}
-          setIsVisible={setIsVisible}
+          setIsShortUrl={setIsShortUrl}
         />
-        <UrlList isVisible={isVisible} text={text} inputValue={inputValue} />
+        <UrlList isShortUrl={isShortUrl} text={text} inputValue={inputValue} />
       </div>
     </div>
   );

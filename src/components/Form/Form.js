@@ -2,7 +2,7 @@ import Input from "../Input/Input";
 import Button from "../Button/Button";
 
 import "./Form.css";
-const Form = ({ setText, setInputValue, inputValue, setIsVisible }) => {
+const Form = ({ setText, setInputValue, inputValue, setIsShortUrl }) => {
   const fetchShortUrl = async () => {
     return await fetch(`https://clck.ru/--?url=${inputValue}`)
       .then((res) => res.text())
@@ -14,7 +14,7 @@ const Form = ({ setText, setInputValue, inputValue, setIsVisible }) => {
     e.preventDefault();
     const response = await fetchShortUrl();
     setText(response);
-    setIsVisible(true);
+    setIsShortUrl(true);
   };
 
   return (

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./UrlList.css";
 
-const UrlList = ({ isVisible, text, inputValue }) => {
+const UrlList = ({ isShortUrl, text }) => {
   const [isCopyVisible, setIsCopyVisible] = useState(false);
 
   const saveClipboard = () => {
@@ -20,7 +20,7 @@ const UrlList = ({ isVisible, text, inputValue }) => {
   };
 
   return (
-    <div className={`box ${isVisible ? "active" : "hide"}`}>
+    <div className={`box ${isShortUrl ? "active" : "hide"}`}>
       <div className="url">
         <div className="urlText">{text}</div>
         <div className="copyright" onClick={saveClipboard}>
